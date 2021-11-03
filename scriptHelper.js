@@ -40,7 +40,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let faultyItems = document.getElementById("faultyItems");
     let h2 = document.getElementsByTagName("h2")[1];
 
-    console.log(h2.innerHTML)
+    // console.log(h2.innerHTML);
     
     list.style.visibility = "visible";
     pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
@@ -54,6 +54,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         event.preventDefault();
     }
     else if (validateInput(pilot) === "Is a Number" || validateInput(copilot)=== "Is a Number"){
+        
         alert("Please enter a valid name for Pilot name or Co-pilot name (or both)");
         event.preventDefault();
     }
