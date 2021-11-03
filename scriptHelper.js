@@ -23,10 +23,10 @@ if (testInput === ''){
     return "Empty"
 }
 if (isNaN(testInput)){//true
-    return "Not a number";
+    return "Not a Number";
 }
 if (!isNaN(testInput)){//false
-    return "Is a number"
+    return "Is a Number"
 }
 
      }
@@ -53,11 +53,11 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         alert("Please enter all information");
         event.preventDefault();
     }
-    else if (validateInput(pilot) === "Is a number" || validateInput(copilot)=== "Is a number"){
+    else if (validateInput(pilot) === "Is a Number" || validateInput(copilot)=== "Is a Number"){
         alert("Please enter a valid name for Pilot name or Co-pilot name (or both)");
         event.preventDefault();
     }
-    else if ((validateInput(fuelLevel)=== "Not a number") || (validateInput(cargoLevel)=== "Not a number")){
+    else if ((validateInput(fuelLevel)=== "Not a Number") || (validateInput(cargoLevel)=== "Not a Number")){
         alert("Please enter valid number for Fuel level or Cargo level (or both)");
         event.preventDefault();
     }
