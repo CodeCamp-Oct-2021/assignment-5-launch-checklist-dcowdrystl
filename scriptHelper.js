@@ -38,7 +38,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let fuelStatus = document.getElementById("fuelStatus");
     let cargoStatus = document.getElementById("cargoStatus");
     let faultyItems = document.getElementById("faultyItems");
-    let h2 = document.getElementsByTagName("h2")[1];
+    // let h2 = document.getElementsByTagName("h2")[1];
 
     // console.log(h2.innerHTML);
     
@@ -50,16 +50,16 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     // console.log(fuelLevel);
     // console.log(cargoLevel);
     if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty"){
-        alert("Please enter all information");
+        alert("All fields are required!");
         event.preventDefault();
     }
     else if (validateInput(pilot) === "Is a Number" || validateInput(copilot)=== "Is a Number"){
         
-        alert("Please enter a valid name for Pilot name or Co-pilot name (or both)");
+        alert("Make sure to enter valid information for each field!");
         event.preventDefault();
     }
     else if ((validateInput(fuelLevel)=== "Not a Number") || (validateInput(cargoLevel)=== "Not a Number")){
-        alert("Please enter valid number for Fuel level or Cargo level (or both)");
+        alert("Make sure to enter valid information for each field!");
         event.preventDefault();
     }
      else {
