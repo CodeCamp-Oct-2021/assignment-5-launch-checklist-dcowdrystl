@@ -66,7 +66,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         alert("Make sure to enter valid information for each field!");
         //event.preventDefault();
         //faultyItems.style.visibility = "hidden";
-        list.style.visibility = "hidden";
+        //list.style.visibility = "hidden";
     }
      else {
         list.style.visibility = "hidden";
