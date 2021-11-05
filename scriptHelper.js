@@ -41,8 +41,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     // let h2 = document.getElementsByTagName("h2")[1];
 
     // console.log(h2.innerHTML);
-    pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
-    copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
+    // pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
+    // copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
     list.style.visibility = "visible";
 
     // console.log(pilot);
