@@ -37,12 +37,12 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let launchStatus = document.getElementById("launchStatus");
     let fuelStatus = document.getElementById("fuelStatus");
     let cargoStatus = document.getElementById("cargoStatus");
-    let list = document.getElementById("faultyItems");
+    //let faultyItems = document.getElementById("faultyItems");
     // let h2 = document.getElementsByTagName("h2")[1];
 
     // console.log(h2.innerHTML);
     
-    faultyItems.style.visibility = "visible";
+    list.style.visibility = "visible";
 
     // console.log(pilot);
     // console.log(copilot);
@@ -50,10 +50,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     // console.log(cargoLevel);
     
     if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty"){
-        faultyItems.style.visibility = "hidden";
+        list.style.visibility = "hidden";
         alert("All fields are required!");
        // event.preventDefault();
-        faultyItems.style.visibility = "hidden";
+        //faultyItems.style.visibility = "hidden";
     }
     else if (validateInput(pilot) === "Is a Number" || validateInput(copilot)=== "Is a Number"){
         
@@ -71,7 +71,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
      }
         if (fuelLevel < 10000) {
-           faultyItems.style.visibility = "visible";
+           list.style.visibility = "visible";
            launchStatus.innerHTML = "Shuttle Not Ready for Launch";
            launchStatus.style.color = "rgb(199, 37, 78)";
            fuelStatus.innerHTML = "Fuel level too low for launch";
@@ -79,7 +79,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
            fuelStatus.innerHTML = "Fuel level high enough for launch";
         }
         if (cargoLevel > 10000) {
-           faultyItems.style.visibility = "visible";
+           list.style.visibility = "visible";
            launchStatus.innerHTML = "Shuttle Not Ready for Launch";
            launchStatus.style.color = "rgb(199, 37, 78)";
            cargoStatus.innerHTML = "Cargo mass too heavy for launch";

@@ -12,7 +12,7 @@ window.addEventListener("load", function() {
      let cargoMass = (document.querySelector("input[name=cargoMass]"));
      
      let list = document.getElementById("faultyItems")
-     
+
        event.preventDefault();
      formSubmission(document, list, pilot.value, copilot.value, fuelLevel.value, cargoMass.value);
     //  event.preventDefault();
