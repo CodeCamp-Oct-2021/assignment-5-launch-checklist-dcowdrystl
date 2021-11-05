@@ -51,9 +51,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     // console.log(cargoLevel);
     
     if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty"){
+        faultyItems.style.visibility = "hidden";
         alert("All fields are required!");
        // event.preventDefault();
-        faultyItems.style.visibility = "hidden";
+       // faultyItems.style.visibility = "hidden";
     }
     else if (validateInput(pilot) === "Is a Number" || validateInput(copilot)=== "Is a Number"){
         
