@@ -37,7 +37,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let launchStatus = document.getElementById("launchStatus");
     let fuelStatus = document.getElementById("fuelStatus");
     let cargoStatus = document.getElementById("cargoStatus");
-    let faultyItems = document.getElementById("faultyItems");
+    let list = document.getElementById("faultyItems");
     // let h2 = document.getElementsByTagName("h2")[1];
 
     // console.log(h2.innerHTML);
@@ -90,7 +90,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
            launchStatus.innerHTML = "Shuttle is Ready for Launch";
            launchStatus.style.color = "rgb(65, 159, 106)";
            cargoStatus.innerHTML = "Cargo mass low enough for launch";
-           faultyItems.style.visibility = "hidden";
+           list.style.visibility = "hidden";
         }
         //event.preventDefault();
 }
