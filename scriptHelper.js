@@ -49,18 +49,19 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     // console.log(copilot);
     // console.log(fuelLevel);
     // console.log(cargoLevel);
+    
     if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty"){
         alert("All fields are required!");
-        event.preventDefault();
+       // event.preventDefault();
     }
     else if (validateInput(pilot) === "Is a Number" || validateInput(copilot)=== "Is a Number"){
         
         alert("Make sure to enter valid information for each field!");
-        event.preventDefault();
+        //event.preventDefault();
     }
     else if ((validateInput(fuelLevel)=== "Not a Number") || (validateInput(cargoLevel)=== "Not a Number")){
         alert("Make sure to enter valid information for each field!");
-        event.preventDefault();
+        //event.preventDefault();
     }
      else {
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
@@ -88,7 +89,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
            cargoStatus.innerHTML = "Cargo mass low enough for launch";
            faultyItems.style.visibility = "hidden";
         }
-        event.preventDefault();
+        //event.preventDefault();
 }
 
 //THIS FUNCTION IS COMPLETE
